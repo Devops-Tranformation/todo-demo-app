@@ -1,0 +1,9 @@
+{
+  "name": "todo-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo 'Building TODO app...'",
+    "test": "echo 'Running fake test...' && exit 0",
+    "start": "node app.js"
+  }
+}
