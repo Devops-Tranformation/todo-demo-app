@@ -14,7 +14,7 @@ pipeline {
     stage('Install & Build') {
       agent { docker { image 'node:16-alpine' } }
       steps {
-        sh 'npm ci'
+        sh 'npm ci --cache=./.npm-cache'
         sh 'npm run build'
       }
     }
