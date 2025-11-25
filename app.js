@@ -5,12 +5,12 @@ const todos = [
   "Learn Jenkins pipelines",
   "Automate builds with Git",
   "Deploy sample Node app",
-  "First check after push",
+  "Test Git tigger actions",
 ];
 
 app.get('/', (req, res) => {
   res.send(`
-    <h1>TODO Application by Ram</h1>
+    <h1>TODO App by Ram</h1>
     <ul>
       ${todos.map(item => `<li>${item}</li>`).join('')}
     </ul>
