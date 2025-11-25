@@ -35,5 +35,15 @@ pipeline {
         sh 'node app.js'
       }
     }
+    stage('Deploy') {
+      steps {
+        sh '''
+          docker stop todo || true
+          docker rm todo || true
+          docker build -t todo-app .
+          docker run -d --name todo -p 3000:3000 todo-app
+        '''
+      }
+    }
   }
 }
