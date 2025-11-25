@@ -1,5 +1,10 @@
 pipeline {
-  agent any   // Host VM (Jenkins server)
+  agent any   // Jenkins host
+
+  // Make npm cache use a folder inside the workspace
+  environment {
+    NPM_CONFIG_CACHE = "${WORKSPACE}/.npm-cache"
+  }
 
   stages {
 
@@ -15,7 +20,10 @@ pipeline {
         docker { image 'node:16-alpine' }
       }
       steps {
-        sh 'npm install'
+        sh '''
+          mkdir -p "$NPM_CONFIG_CACHE"
+          npm install
+        '''
       }
     }
 
