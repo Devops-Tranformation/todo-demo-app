@@ -5,7 +5,7 @@ const todos = [
   "Learn Jenkins pipelines",
   "Automate builds with Git",
   "Deploy sample Node app",
-  "1st check after push",
+  "First check after push",
 ];
 
 app.get('/', (req, res) => {
