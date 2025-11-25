@@ -6,6 +6,7 @@ const todos = [
   "Automate builds with Git",
   "Deploy sample Node app",
   "Test the Todo app",
+  "Demo github test",
 ];
 
 app.get('/', (req, res) => {
