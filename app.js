@@ -1,5 +1,21 @@
-console.log("✅ TODO Application is starting...");
-console.log("📝 Current TODOs:");
-console.log("- Learn Jenkins pipelines");
-console.log("- Automate builds with Git");
-console.log("- Deploy sample Node app");
+const express = require('express');
+const app = express();
+
+const todos = [
+  "Learn Jenkins pipelines",
+  "Automate builds with Git",
+  "Deploy sample Node app"
+];
+
+app.get('/', (req, res) => {
+  res.send(`
+    <h1>TODO Application</h1>
+    <ul>
+      ${todos.map(item => `<li>${item}</li>`).join('')}
+    </ul>
+  `);
+});
+
+app.listen(3000, () => {
+  console.log("🚀 TODO App running on http://localhost:3000");
+});
