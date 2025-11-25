@@ -4,8 +4,8 @@ const app = express();
 const todos = [
   "Learn Jenkins pipelines",
   "Automate builds with Git",
-  "Deploy sample Node app"
-  "Test the Todo app"
+  "Deploy sample Node app",
+  "Test the Todo app",
 ];
 
 app.get('/', (req, res) => {
