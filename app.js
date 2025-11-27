@@ -11,7 +11,7 @@ const todos = [
 
 app.get('/', (req, res) => {
   res.send(`
-    <h1>TODO App by Ram</h1>
+    <h1>Ram TODO App </h1>
     <ul>
       ${todos.map(item => `<li>${item}</li>`).join('')}
     </ul>
