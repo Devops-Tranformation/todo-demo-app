@@ -6,7 +6,7 @@ To Build the Todo-Demo App Need to create 3 files
 3. Jenkinsfile
 
 # Preriquisites For this Todo App
-1 Install jenkins
-2 Install Npm 
+1. Install jenkins
+2. Install Npm 
 
 
